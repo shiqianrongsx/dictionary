@@ -31,12 +31,12 @@
 例如：.ajaxStart()与.ajaxStop()。当Ajax请求开始且尚未进行其他传输时，会出发.ajaxStart()的回到函数。但当最后一次活动请求终止时，则会执行通过.ajaxStop()注册的回调函数。这些函数是全局性的，无论创建他们的代码位于何处，当Ajax通信发生时都需要调用他们。而且这些方法与.ready()方法一样，只能由$(document)调用。
 
 `	
-	var $loading=$('<div id="loading">Loading...</div>').insertBefore('#dictionary');<br/>'
-'	$(document).ajaxStart(function(){<br/>'
-'		$loading.show();<br/>'
-'	}).ajaxStop(function(){'
-'		$loading.hide();'
-'	});
+	var $loading=$('<div id="loading">Loading...</div>').insertBefore('#dictionary');<br/>
+	$(document).ajaxStart(function(){<br/>
+		$loading.show();<br/>
+	}).ajaxStop(function(){
+		$loading.hide();
+	});
 `
 
 Ajax与事件
